@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        // Grants read and write access to the owner of this user account
+        // whose UID must exactly match the key ($uid).
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    }
+  }
+}
